@@ -11,8 +11,8 @@ module.exports = {
     mumbai: {
       url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
       accounts: [privateKey]
-    },
-    mainnet: {}
+    }
+    // ,mainnet: {}
   },
   solidity: "0.8.4",
 };

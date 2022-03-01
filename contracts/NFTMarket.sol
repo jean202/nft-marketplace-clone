@@ -104,7 +104,7 @@ contract NFTMarket is ReentrancyGuard {
     payable(owner).transfer(listingPrice);
   }
 
-  /* Returns all unsold market items */
+  /* 판매되지 않은 모든 아이템 */
   function fetchMarketItems() public view returns (MarketItem[] memory) {
     uint itemCount = _itemIds.current();
     uint unsoldItemCount = _itemIds.current() - _itemsSold.current();
@@ -122,7 +122,7 @@ contract NFTMarket is ReentrancyGuard {
     return items;
   }
 
-  /* Returns only items that a user has purchased */
+  /* 특정인이 구매한 아이템 */
   function fetchMyNFTs() public view returns (MarketItem[] memory) {
     uint totalItemCount = _itemIds.current();
     uint itemCount = 0;
@@ -146,7 +146,7 @@ contract NFTMarket is ReentrancyGuard {
     return items;
   }
 
-  /* Returns only items a user has created */
+  /* 특정인이 생성한 아이템 */
   function fetchItemsCreated() public view returns (MarketItem[] memory) {
     uint totalItemCount = _itemIds.current();
     uint itemCount = 0;
